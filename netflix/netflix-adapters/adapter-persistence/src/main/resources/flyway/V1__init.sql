@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `netplix`.`users`;
-CREATE TABLE `netplix`.`users`
+DROP TABLE IF EXISTS `netflix`.`users`;
+CREATE TABLE `netflix`.`users`
 (
     USER_ID     VARCHAR(255) NOT NULL COMMENT '사용자 ID (UUID)',
     USER_NAME   VARCHAR(50)  NOT NULL COMMENT '사용자 이름',
