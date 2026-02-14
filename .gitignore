@@ -1,2 +1,4 @@
 /netflix/infra/db
 netflix/netflix-adapters/adapter-http/src/main/resources/adapter-http-property.yml
+/netflix/netflix-frontend/node_modules
+/netflix/node_modules

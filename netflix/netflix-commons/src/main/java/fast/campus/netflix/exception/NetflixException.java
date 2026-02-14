@@ -3,10 +3,10 @@ package fast.campus.netflix.exception;
 import lombok.Getter;
 
 @Getter
-public class NetplixException extends RuntimeException {
+public class NetflixException extends RuntimeException {
     private final ErrorCode errorCode;
 
-    public NetplixException(ErrorCode errorCode) {
+    public NetflixException(ErrorCode errorCode) {
         this.errorCode = errorCode;
     }
 }

@@ -1,6 +1,6 @@
 package fast.campus.netflix.exception;
 
-public class UserException extends NetplixException  {
+public class UserException extends NetflixException  {
     public UserException(ErrorCode errorCode) {
         super(errorCode);
     }
