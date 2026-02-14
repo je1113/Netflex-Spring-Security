@@ -4,4 +4,5 @@ dependencies {
     implementation(project(":netflix-commons"))
 
     implementation("org.springframework:spring-context")
+    implementation("org.springframework.boot:spring-boot-starter-web")
 }
