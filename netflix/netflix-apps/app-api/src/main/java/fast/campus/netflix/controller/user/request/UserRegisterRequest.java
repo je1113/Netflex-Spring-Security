@@ -1,11 +1,13 @@
 package fast.campus.netflix.controller.user.request;
 
+import fast.campus.netflix.annotation.PasswordEncryption;
 import lombok.Getter;
 
 @Getter
 public class UserRegisterRequest {
     private final String username;
-    private final String password;
+    @PasswordEncryption
+    private String password;
     private final String email;
     private final String phone;
 

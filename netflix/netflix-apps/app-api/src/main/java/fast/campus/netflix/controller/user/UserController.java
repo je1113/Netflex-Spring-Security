@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class UserController {
     private final RegisterUserUseCase registerUserUseCase;
-    private final PasswordEncoder passwordEncoder;
     @PostMapping("/api/v1/user/register")
     public NetflixApiResponse<UserRegistrationResponse> register(@RequestBody UserRegisterRequest request){
         UserRegistrationResponse register =  registerUserUseCase.register(
@@ -23,7 +22,7 @@ public class UserController {
                         .email(request.getEmail())
                         .phone(request.getPhone())
                         .username(request.getUsername())
-                        .encryptedPassword(passwordEncoder.encode(request.getPassword()))
+                        .encryptedPassword(request.getPassword())
                         .build()
         );
         return NetflixApiResponse.ok(register);
