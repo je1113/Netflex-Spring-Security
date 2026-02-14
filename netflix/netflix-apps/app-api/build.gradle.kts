@@ -5,4 +5,5 @@ dependencies {
 
     runtimeOnly(project(":netflix-adapters:adapter-http"))
     runtimeOnly(project(":netflix-adapters:adapter-persistence"))
+    runtimeOnly(project(":netflix-adapters:adapter-redis"))
 }
