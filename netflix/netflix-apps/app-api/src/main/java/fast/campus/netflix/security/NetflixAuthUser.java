@@ -1,10 +1,12 @@
 package fast.campus.netflix.security;
 
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
 import java.util.Collection;
 
+@Getter
 public class NetflixAuthUser extends User {
     private final String userId;
     private final String username;
