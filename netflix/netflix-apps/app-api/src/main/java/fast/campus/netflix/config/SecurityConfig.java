@@ -1,5 +1,6 @@
 package fast.campus.netflix.config;
 
+import fast.campus.netflix.security.NetflixUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +23,8 @@ import java.util.Collections;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
+    private final NetflixUserDetailsService netflixUserDetailsService;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.httpBasic(AbstractHttpConfigurer::disable);
@@ -40,6 +43,7 @@ public class SecurityConfig {
                 .failureUrl("/login?error=true")
         );
 
+        httpSecurity.userDetailsService(netflixUserDetailsService);
         return httpSecurity.build();
     }
 
