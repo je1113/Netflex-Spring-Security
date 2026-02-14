@@ -1,8 +1,10 @@
 package fast.campus.netflix.authentication;
 
-import java.util.Optional;
+import org.springframework.stereotype.Component;
 
-public abstract class AuthenticationHolderImpl implements AuthenticationHolder, RequestedByProvider{
+import java.util.Optional;
+@Component
+public class AuthenticationHolderImpl implements AuthenticationHolder, RequestedByProvider{
 
     private Authentication authentication;
 
