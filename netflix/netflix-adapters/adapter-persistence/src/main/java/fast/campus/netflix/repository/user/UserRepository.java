@@ -1,8 +1,7 @@
 package fast.campus.netflix.repository.user;
 
 import fast.campus.netflix.entity.user.UserEntity;
-import fast.campus.netflix.user.FetchUserPort;
-import fast.campus.netflix.user.UserPortResponse;
+import fast.campus.netflix.user.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class UserRepository implements FetchUserPort {
+public class UserRepository implements FetchUserPort, InsertUserPort {
 
     private final UserJpaRepository userJpaRepository;
 
@@ -28,5 +27,12 @@ public class UserRepository implements FetchUserPort {
                 .email(byEmail.get().getEmail())
                 .phone(byEmail.get().getPhone())
                 .build());
+    }
+
+    @Override
+    public NetflixUser create(CreateUser create) {
+        UserEntity user = UserEntity.toEntity(create);
+        return userJpaRepository.save(user)
+                .toDomain();
     }
 }

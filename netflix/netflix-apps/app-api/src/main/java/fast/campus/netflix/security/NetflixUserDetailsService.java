@@ -1,7 +1,7 @@
 package fast.campus.netflix.security;
 
 import fast.campus.netflix.user.FetchUserUseCase;
-import fast.campus.netflix.user.command.UserResponse;
+import fast.campus.netflix.user.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

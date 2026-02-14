@@ -1,6 +1,8 @@
 package fast.campus.netflix.entity.user;
 
 import fast.campus.netflix.audit.MutableBaseEntity;
+import fast.campus.netflix.user.CreateUser;
+import fast.campus.netflix.user.NetflixUser;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -38,5 +40,23 @@ public class UserEntity extends MutableBaseEntity {
         this.password = password;
         this.email = email;
         this.phone = phone;
+    }
+    public NetflixUser toDomain() {
+        return NetflixUser.builder()
+                .userId(this.userId)
+                .username(this.username)
+                .encryptedPassword(this.password)
+                .email(this.email)
+                .phone(this.phone)
+                .build();
+    }
+
+    public static UserEntity toEntity(CreateUser createUser) {
+        return new UserEntity(
+                createUser.getUsername(),
+                createUser.getEncryptedPassword(),
+                createUser.getEmail(),
+                createUser.getPhone()
+        );
     }
 }
