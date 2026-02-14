@@ -1,7 +1,10 @@
 package fast.campus.netflix.movie;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 public class TmdbPageableMovies {
     private final List<TmdbMovie> tmdbMovies;
     private final int page;
