@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class RequestedByAuditAware implements AuditorAware<String> {
+public class RequestedByAuditorAware implements AuditorAware<String> {
 
     private final ApplicationContext context;
     @Override
