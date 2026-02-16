@@ -14,21 +14,21 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserService implements FetchUserUseCase, RegisterUserUseCase{
 
-    private final FetchUserPort fetchUserPort;
+    private final SearchUserPort searchUserPort;
     private final InsertUserPort insertUserPort;
 
     @Override
     public UserResponse findUserByEmail(String email) {
-        Optional<UserPortResponse> byEmail = fetchUserPort.findByEmail(email);
+        Optional<NetflixUser> byEmail = searchUserPort.findByEmail(email);
         if(byEmail.isEmpty()){
             throw new UserException.UserDoesNotExistException();
         }
 
-        UserPortResponse userPortResponse = byEmail.get();
+        NetflixUser userPortResponse = byEmail.get();
         return UserResponse.builder()
                 .userId(userPortResponse.getUserId())
                 .email(userPortResponse.getEmail())
-                .password(userPortResponse.getPassword())
+                .password(userPortResponse.getEncryptedPassword())
                 .phone(userPortResponse.getPhone())
                 .role(userPortResponse.getRole())
                 .username(userPortResponse.getUsername())
@@ -37,7 +37,7 @@ public class UserService implements FetchUserUseCase, RegisterUserUseCase{
 
     @Override
     public UserRegistrationResponse register(UserRegistrationCommand request) {
-        Optional<UserPortResponse> byEmail = fetchUserPort.findByEmail(request.email());
+        Optional<NetflixUser> byEmail = searchUserPort.findByEmail(request.email());
         if (byEmail.isPresent()) {
             throw new UserException.UserAlreadyExistException();
         }

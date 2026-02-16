@@ -15,8 +15,8 @@ CREATE TABLE `netflix`.`users`
     PRIMARY KEY (USER_ID)
 );
 
-DROP TABLE IF EXISTS `netplix`.`social_users`;
-CREATE TABLE `netplix`.`social_users`
+DROP TABLE IF EXISTS `netflix`.`social_users`;
+CREATE TABLE `netflix`.`social_users`
 (
     SOCIAL_USER_ID VARCHAR(255) NOT NULL COMMENT '소셜 사용자 ID (UUID)',
     USER_NAME      VARCHAR(50)  NOT NULL COMMENT '소셜 사용자 이름',
@@ -31,8 +31,8 @@ CREATE TABLE `netplix`.`social_users`
     PRIMARY KEY (SOCIAL_USER_ID)
 );
 
-DROP TABLE IF EXISTS `netplix`.`user_histories`;
-CREATE TABLE `netplix`.`user_histories`
+DROP TABLE IF EXISTS `netflix`.`user_histories`;
+CREATE TABLE `netflix`.`user_histories`
 (
     USER_HISTORY_ID BIGINT       NOT NULL AUTO_INCREMENT COMMENT '사용자 이력 ID',
     USER_ID         VARCHAR(255) NOT NULL COMMENT '사용자 ID',
@@ -51,8 +51,8 @@ CREATE TABLE `netplix`.`user_histories`
     PRIMARY KEY (USER_HISTORY_ID)
 );
 
-DROP TABLE IF EXISTS `netplix`.`user_subscriptions`;
-CREATE TABLE `netplix`.`user_subscriptions`
+DROP TABLE IF EXISTS `netflix`.`user_subscriptions`;
+CREATE TABLE `netflix`.`user_subscriptions`
 (
     USER_SUBSCRIPTION_ID VARCHAR(255) NOT NULL COMMENT '사용자 구독 ID',
     USER_ID              VARCHAR(255) NOT NULL COMMENT '사용자 ID',
@@ -69,8 +69,8 @@ CREATE TABLE `netplix`.`user_subscriptions`
     PRIMARY KEY (USER_SUBSCRIPTION_ID)
 );
 
-DROP TABLE IF EXISTS `netplix`.`tokens`;
-CREATE TABLE `netplix`.`tokens`
+DROP TABLE IF EXISTS `netflix`.`tokens`;
+CREATE TABLE `netflix`.`tokens`
 (
     TOKEN_ID                 VARCHAR(255) NOT NULL COMMENT '토큰 PK',
     USER_ID                  VARCHAR(255) NOT NULL COMMENT '사용자 ID',
@@ -87,8 +87,8 @@ CREATE TABLE `netplix`.`tokens`
     PRIMARY KEY (TOKEN_ID)
 );
 
-DROP TABLE IF EXISTS `netplix`.`movies`;
-CREATE TABLE `netplix`.`movies`
+DROP TABLE IF EXISTS `netflix`.`movies`;
+CREATE TABLE `netflix`.`movies`
 (
     MOVIE_ID    VARCHAR(255) NOT NULL COMMENT '영화 ID',
     MOVIE_NAME  VARCHAR(255) NOT NULL COMMENT '영화 명',
@@ -105,8 +105,8 @@ CREATE TABLE `netplix`.`movies`
     PRIMARY KEY (MOVIE_ID)
 );
 
-DROP TABLE IF EXISTS `netplix`.`user_movie_likes`;
-CREATE TABLE `netplix`.`user_movie_likes`
+DROP TABLE IF EXISTS `netflix`.`user_movie_likes`;
+CREATE TABLE `netflix`.`user_movie_likes`
 (
     USER_MOVIE_LIKE_ID VARCHAR(255) NOT NULL COMMENT 'PK',
     USER_ID            VARCHAR(255) NOT NULL COMMENT '사용자 ID',

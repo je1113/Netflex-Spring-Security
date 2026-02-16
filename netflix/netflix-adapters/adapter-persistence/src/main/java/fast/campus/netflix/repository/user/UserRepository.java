@@ -10,23 +10,33 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class UserRepository implements FetchUserPort, InsertUserPort {
+public class UserRepository implements SearchUserPort, InsertUserPort {
 
     private final UserJpaRepository userJpaRepository;
 
     @Override
-    public Optional<UserPortResponse> findByEmail(String email) {
+    public Optional<NetflixUser> findByEmail(String email) {
         Optional<UserEntity> byEmail = userJpaRepository.findByEmail(email);
         if(byEmail.isEmpty()){
             return Optional.empty();
         }
-        return Optional.of(UserPortResponse.builder()
+        return Optional.of(NetflixUser.builder()
                 .userId(byEmail.get().getUserId())
-                .password(byEmail.get().getPassword())
+                .encryptedPassword(byEmail.get().getPassword())
                 .username(byEmail.get().getEmail())
                 .email(byEmail.get().getEmail())
                 .phone(byEmail.get().getPhone())
                 .build());
+    }
+
+    @Override
+    public NetflixUser getByEmail(String email) {
+        return null;
+    }
+
+    @Override
+    public Optional<NetflixUser> findByProviderId(String providerId) {
+        return Optional.empty();
     }
 
     @Override
