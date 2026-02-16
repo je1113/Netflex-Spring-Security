@@ -2,7 +2,7 @@ package fast.campus.netflix.entity.user;
 
 import fast.campus.netflix.audit.MutableBaseEntity;
 import fast.campus.netflix.user.CreateUser;
-import fast.campus.netflix.user.NetflixUser;
+import fast.campus.netflix.auth.NetflixUser;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

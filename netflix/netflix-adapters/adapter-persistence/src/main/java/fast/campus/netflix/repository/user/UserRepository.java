@@ -1,11 +1,11 @@
 package fast.campus.netflix.repository.user;
 
+import fast.campus.netflix.auth.NetflixUser;
 import fast.campus.netflix.entity.user.UserEntity;
 import fast.campus.netflix.user.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Repository

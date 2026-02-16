@@ -1,4 +1,4 @@
-package fast.campus.netflix.user;
+package fast.campus.netflix.auth;
 
 import lombok.Builder;
 import lombok.Getter;

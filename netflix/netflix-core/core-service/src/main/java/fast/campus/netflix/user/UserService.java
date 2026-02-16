@@ -1,5 +1,6 @@
 package fast.campus.netflix.user;
 
+import fast.campus.netflix.auth.NetflixUser;
 import fast.campus.netflix.exception.UserException;
 import fast.campus.netflix.user.command.UserRegistrationCommand;
 import fast.campus.netflix.user.response.UserRegistrationResponse;
