@@ -1,6 +1,6 @@
 package fast.campus.netflix.entity.movie;
 import fast.campus.netflix.entity.audit.MutableBaseEntity;
-import fast.campus.netflix.movie.NetplixMovie;
+import fast.campus.netflix.movie.NetflixMovie;
 import io.micrometer.common.util.StringUtils;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,8 +38,8 @@ public class MovieEntity extends MutableBaseEntity {
     @Column(name = "RELEASED_AT")
     private String releasedAt;
 
-    public NetplixMovie toDomain() {
-        return NetplixMovie.builder()
+    public NetflixMovie toDomain() {
+        return NetflixMovie.builder()
                 .movieName(this.movieName)
                 .isAdult(this.isAdult)
                 .genre(this.genre)
@@ -48,14 +48,14 @@ public class MovieEntity extends MutableBaseEntity {
                 .build();
     }
 
-    public static MovieEntity toEntity(NetplixMovie netplixMovie) {
+    public static MovieEntity toEntity(NetflixMovie netflixMovie) {
         return new MovieEntity(
                 UUID.randomUUID().toString(),
-                netplixMovie.getMovieName(),
-                netplixMovie.getIsAdult(),
-                netplixMovie.getGenre(),
-                getSubstrOverview(netplixMovie.getOverview()),
-                netplixMovie.getReleasedAt()
+                netflixMovie.getMovieName(),
+                netflixMovie.getIsAdult(),
+                netflixMovie.getGenre(),
+                getSubstrOverview(netflixMovie.getOverview()),
+                netflixMovie.getReleasedAt()
         );
     }
 
