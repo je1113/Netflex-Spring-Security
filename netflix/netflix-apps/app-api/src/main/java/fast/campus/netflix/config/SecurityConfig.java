@@ -39,9 +39,9 @@ public class SecurityConfig {
                                 "/api/v1/auth/**"
                         ).permitAll()
                         .anyRequest().authenticated());
-        // httpSecurity.oauth2Login(oauth2 -> oauth2
-        //         .failureUrl("/login?error=true")
-        // );
+         httpSecurity.oauth2Login(oauth2 -> oauth2
+                 .failureUrl("/login?error=true")
+         );
 
         httpSecurity.userDetailsService(netflixUserDetailsService);
         return httpSecurity.build();

@@ -20,12 +20,12 @@ public class NetflixUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         UserResponse userResponse = fetchUserUseCase.findUserByEmail(email);
         return new NetflixAuthUser(
-                userResponse.getUserId(),
-                userResponse.getUsername(),
-                userResponse.getPassword(),
-                userResponse.getEmail(),
-                userResponse.getPhone(),
-                List.of(new SimpleGrantedAuthority(userResponse.getRole()))
+                userResponse.userId(),
+                userResponse.username(),
+                userResponse.password(),
+                userResponse.email(),
+                userResponse.phone(),
+                List.of(new SimpleGrantedAuthority(userResponse.role()))
         );
 
     }
