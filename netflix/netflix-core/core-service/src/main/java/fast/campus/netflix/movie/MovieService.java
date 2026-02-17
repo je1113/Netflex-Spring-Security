@@ -31,4 +31,9 @@ public class MovieService implements FetchMovieUseCase{
                 tmdbPageableMovies.isHasNext()
         );
     }
+
+    @Override
+    public PageableMoviesResponse fetchFromDb(int page) {
+        return null;
+    }
 }
