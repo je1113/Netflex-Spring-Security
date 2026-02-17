@@ -1,6 +1,6 @@
 package fast.campus.netflix.repository.token;
 
-import fast.campus.netflix.auth.NetplixToken;
+import fast.campus.netflix.auth.NetflixToken;
 import fast.campus.netflix.entity.token.TokenEntity;
 import fast.campus.netflix.token.InsertTokenPort;
 import fast.campus.netflix.token.SearchTokenPort;
@@ -17,13 +17,13 @@ public class TokenRepository implements InsertTokenPort, UpdateTokenPort, Search
     private final TokenJpaRepository tokenJpaRepository;
 
     @Override
-    public NetplixToken create(String userId, String accessToken, String refreshToken) {
+    public NetflixToken create(String userId, String accessToken, String refreshToken) {
         TokenEntity entity = TokenEntity.toEntity(userId, accessToken, refreshToken);
         return tokenJpaRepository.save(entity).toDomain();
     }
 
     @Override
-    public Optional<NetplixToken> findByUserId(String userId) {
+    public Optional<NetflixToken> findByUserId(String userId) {
         return tokenJpaRepository.findByUserId(userId)
                 .map(TokenEntity::toDomain);
     }

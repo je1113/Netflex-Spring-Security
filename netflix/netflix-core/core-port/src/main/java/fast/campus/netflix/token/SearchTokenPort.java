@@ -1,9 +1,9 @@
 package fast.campus.netflix.token;
 
-import fast.campus.netflix.auth.NetplixToken;
+import fast.campus.netflix.auth.NetflixToken;
 
 import java.util.Optional;
 
 public interface SearchTokenPort {
-    Optional<NetplixToken> findByUserId(String userId);
+    Optional<NetflixToken> findByUserId(String userId);
 }

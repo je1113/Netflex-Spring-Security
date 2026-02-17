@@ -1,6 +1,6 @@
 package fast.campus.netflix.entity.token;
 
-import fast.campus.netflix.auth.NetplixToken;
+import fast.campus.netflix.auth.NetflixToken;
 import fast.campus.netflix.entity.audit.MutableBaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -54,8 +54,8 @@ public class TokenEntity extends MutableBaseEntity {
         this.refreshTokenExpiresAt = getRefreshTokenExpiredAt(now);
     }
 
-    public NetplixToken toDomain() {
-        return NetplixToken.builder()
+    public NetflixToken toDomain() {
+        return NetflixToken.builder()
                 .accessToken(this.accessToken)
                 .refreshToken(this.refreshToken)
                 .accessTokenExpireAt(this.accessTokenExpiresAt)

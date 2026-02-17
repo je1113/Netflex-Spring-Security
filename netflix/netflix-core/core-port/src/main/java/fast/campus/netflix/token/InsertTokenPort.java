@@ -1,7 +1,7 @@
 package fast.campus.netflix.token;
 
-import fast.campus.netflix.auth.NetplixToken;
+import fast.campus.netflix.auth.NetflixToken;
 
 public interface InsertTokenPort {
-    NetplixToken create(String userId, String accessToken, String refreshToken);
+    NetflixToken create(String userId, String accessToken, String refreshToken);
 }

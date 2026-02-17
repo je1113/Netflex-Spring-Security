@@ -12,5 +12,7 @@ dependencies {
     runtimeOnly(project(":netflix-adapters:adapter-persistence"))
     runtimeOnly(project(":netflix-adapters:adapter-redis"))
 
-
+    implementation("io.jsonwebtoken:jjwt-api")
+    implementation("io.jsonwebtoken:jjwt-impl")
+    implementation("io.jsonwebtoken:jjwt-jackson")
 }
