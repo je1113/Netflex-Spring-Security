@@ -4,12 +4,14 @@ import fast.campus.netflix.movie.response.MovieResponse;
 import fast.campus.netflix.movie.response.PageableMoviesResponse;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 
 @Service
-public class MovieService implements FetchMovieUseCase{
+public class MovieService implements FetchMovieUseCase, InsertMovieUseCase{
     private final TmdbMoviePort tmdbMoviePort;
+    PersistenceMoviePort persistenceMoviePort;
 
     public MovieService(TmdbMoviePort tmdbMoviePort) {
         this.tmdbMoviePort = tmdbMoviePort;
@@ -35,5 +37,10 @@ public class MovieService implements FetchMovieUseCase{
     @Override
     public PageableMoviesResponse fetchFromDb(int page) {
         return null;
+    }
+
+    @Override
+    public void insert(List<NetflixMovie> movies) {
+        movies.forEach(persistenceMoviePort::insert);
     }
 }
