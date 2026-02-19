@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="33e92fcc-2f9f-4478-bf29-90c21e2864b9" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/java/fast/campus/netflix/audit/BaseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/java/fast/campus/netflix/audit/MutableBaseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/java/fast/campus/netflix/entity/user/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/java/fast/campus/netflix/entity/user/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/java/fast/campus/netflix/repository/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/java/fast/campus/netflix/repository/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/resources/adapter-persistence-property.yml" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/resources/adapter-persistence-property.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/resources/flyway/V1__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-adapters/adapter-persistence/src/main/resources/flyway/V1__init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-apps/app-api/src/main/java/fast/campus/netflix/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-apps/app-api/src/main/java/fast/campus/netflix/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-apps/app-api/src/main/java/fast/campus/netflix/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-apps/app-api/src/main/java/fast/campus/netflix/controller/auth/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-apps/app-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-apps/app-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-domain/src/main/java/fast/campus/netflix/user/NetflixUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-port/src/main/java/fast/campus/netflix/user/FetchUserPort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-port/src/main/java/fast/campus/netflix/user/InsertUserPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-core/core-port/src/main/java/fast/campus/netflix/user/InsertUserPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-service/src/main/java/fast/campus/netflix/auth/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-core/core-service/src/main/java/fast/campus/netflix/auth/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-service/src/main/java/fast/campus/netflix/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-core/core-service/src/main/java/fast/campus/netflix/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/auth/UpdateTokenUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/auth/UpdateTokenUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/response/TokenResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/user/FetchUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/user/FetchUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/user/RegisterUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/user/RegisterUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/user/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix/netflix-core/core-usecase/src/main/java/fast/campus/netflix/user/response/UserResponse.java" afterDir="false" />
-    </list>
+    <list default="true" id="33e92fcc-2f9f-4478-bf29-90c21e2864b9" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,13 +13,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="39hUaYHR1VOwK66pNSIPvo66y8S" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,6 +34,10 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/app/security",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -71,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771147859696</updated>
       <workItem from="1771147860773" duration="70000" />
+      <workItem from="1771467069089" duration="447000" />
     </task>
     <servers />
   </component>
